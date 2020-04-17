@@ -37,13 +37,13 @@ _Users input their age and will be provided with statistics regarding their age 
 ***
 
 ## Stretch Goals
-* Add UI to application. ** - In Progress**
+* Add UI to application. **Complete**
 * Determine user's next birthdate on each planet.
 
 ***
 
 ## Known Bugs
-* Results div does not clear upon re-submitting form. New results are prepended/appended to the existing data.
+* None currently known.
 
 ***
 
