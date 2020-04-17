@@ -4,16 +4,22 @@ export class AgeCalculator {
     this.age["Earth"]                 = userAge;
     this.lifeExpectancy               = {};
     this.yearsLeftToLive              = {};
+    this.yearsLeftToLive["Mercury"]   = 0;
+    this.yearsLeftToLive["Venus"]      = 0;
+    this.yearsLeftToLive["Earth"]   = 0;
+    this.yearsLeftToLive["Mars"]   = 0;
+    this.yearsLeftToLive["Jupiter"]   = 0;
     this.yearsSurpassed               = {};
     this.yearDuration                 = {};
-    this.yearDuration ["Mercury"]     = .24;
-    this.yearDuration ["Venus"]       = .62;
-    this.yearDuration ["Mars"]        = 1.88;
-    this.yearDuration ["Jupiter"]     = 11.86;
+    this.yearDuration["Mercury"]     = .24;
+    this.yearDuration["Venus"]       = .62;
+    this.yearDuration["Mars"]        = 1.88;
+    this.yearDuration["Jupiter"]     = 11.86;
   }
 
   calculateMercuryAge() {
     this.age["Mercury"] = Math.floor(this.age["Earth"] / this.yearDuration["Mercury"]);
+
   }
 
   calculateVenusAge() {
@@ -48,12 +54,8 @@ export class AgeCalculator {
   }
 
   calculateYearsToLive() {
-    // years to live = life expectancy - age on that planet.
-    let yearsToLive = 0;
-
-    for(let key in this.lifeExpectancy) {
-      this.yearsLeftToLive[key] =  this.lifeExpectancy[key] - this.age[key];
-      console.log(key);
+    for(var key in this.lifeExpectancy) {
+      this.yearsLeftToLive[key] = (this.lifeExpectancy[key] - this.age[key]);
     }
   }
 }
