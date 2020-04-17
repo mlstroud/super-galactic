@@ -9,6 +9,8 @@ _This is an Epicodus individual project to demonstrate Test Driven Development(T
 _The application is designed with object oriented programming._  
 _Users input their age and will be provided with statistics regarding their age and life expectancy on different planets._
 
+***
+
 ## Technology
 * JavaScript & jQuery
 * Webpack
@@ -16,6 +18,8 @@ _Users input their age and will be provided with statistics regarding their age 
 * Jest
 * Bootstrap
 * HTML & CSS
+
+***
 
 ## Specs
 
@@ -30,13 +34,18 @@ _Users input their age and will be provided with statistics regarding their age 
 | Determine years user has left to live on each planet.         | 32, Male, Non-smoker (Venus) | 71     |
 | Determine by how many years user has surpassed life expectancy. | 75, Male, Smoker (Earth)     | 9      |
 
+***
+
 ## Stretch Goals
-* Add UI to application.
+* Add UI to application. ** - In Progress**
 * Determine user's next birthdate on each planet.
 
-## Known Bugs
-* N/ A
+***
 
+## Known Bugs
+* UI
+
+***
 
 ## Setup/Installation Requirements
 
@@ -61,9 +70,13 @@ npm run build & webpack-dev-server --open --mode development
 npm run build; webpack-dev-server --open --mode development
 ```
 
+***
+
 ## View Online
 
 * N/A
+
+***
 
 ### License
 
