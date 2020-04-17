@@ -18,6 +18,16 @@ _Users input their age and will be provided with statistics regarding their age 
 
 ## Specs
 
+| Application Behavior                                          | Input                        | Output |
+|:--------------------------------------------------------------|:-----------------------------|-------:|
+| Accept user input as age on Earth.                            | 32                           | 32     |
+| Determine user's age in Mercury years.                        | 32                           | 133    |
+| Determine user's age in Venus years.                          | 32                           | 51     |
+| Determine user's age in Mars years.                           | 32                           | 17     |
+| Determine user's age in Jupiter years.                        | 32                           | 2      |
+| Determine user's life expectancy on each planet.              | 32, Male, Non-smoker (Venus) | 122    |
+| Determine years user has left to live on each planet.         | 32, Male, Non-smoker (Venus) | 71     |
+| Determine how many years user has lived past life expectancy. | 75, Male, Smoker (Earth)     | 9      |
 
 ## Stretch Goals
 * N/A
