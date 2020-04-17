@@ -21,4 +21,12 @@ export class AgeCalculator {
   calculateVenusAge() {
     this.ageOnVenus = Math.floor(this.age / this.yearOnVenus);
   }
+
+  calculateMarsAge() {
+    this.ageOnMars = Math.floor(this.age / this.yearOnMars);
+  }
+
+  calculateJupiterAge() {
+    this.ageOnJupiter = Math.floor(this.age / this.yearOnJupiter);
+  }
 }
