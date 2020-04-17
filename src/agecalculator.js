@@ -40,7 +40,13 @@ export class AgeCalculator {
 
   calculateYearsToLive() {
     for(let key in this.lifeExpectancy) {
-      this.yearsLeftToLive[key] = this.lifeExpectancy[key] - this.age[key];
+      let years = this.lifeExpectancy[key] - this.age[key];
+      
+      if(years < 0) {
+        this.yearsLeftToLive[key] = 0;
+      } else {
+        this.yearsLeftToLive[key] = years;
+      }
     }
   }
 
