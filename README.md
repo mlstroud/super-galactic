@@ -43,7 +43,7 @@ _Users input their age and will be provided with statistics regarding their age 
 ***
 
 ## Known Bugs
-* UI
+* Results div does not clear upon re-submitting form. New results are prepended/appended to the existing data.
 
 ***
 
