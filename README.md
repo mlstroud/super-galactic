@@ -28,7 +28,7 @@ _Users input their age and will be provided with statistics regarding their age 
 | Determine user's age in Jupiter years.                        | 32                           | 2      |
 | Determine user's life expectancy on each planet.              | 32, Male, Non-smoker (Venus) | 122    |
 | Determine years user has left to live on each planet.         | 32, Male, Non-smoker (Venus) | 71     |
-| Determine how many years user has lived past life expectancy. | 75, Male, Smoker (Earth)     | 9      |
+| Determine by how many years user has surpassed life expectancy. | 75, Male, Smoker (Earth)     | 9      |
 
 ## Stretch Goals
 * Add UI to application.
