@@ -5,7 +5,7 @@ import $ from "jquery";
 import { getResultHTML } from './userinterfacelogic.js';
 
 $(document).ready(function() {
-  
+
   $("#form-age").submit(function(event) {
     event.preventDefault();
 
@@ -14,6 +14,7 @@ $(document).ready(function() {
     let resultHTML = getResultHTML(age);
     let message = `Hi <strong>${name}</strong>, this is a detailed breakdown of your age throughout the solar system!<br><br>`;
     
+    $("#content-form").slideUp();
     $("#content-results").prepend(message);
     $("#table-result").append(resultHTML);
     $("#content-results").slideDown("slow");
