@@ -9,7 +9,7 @@ describe('Age Calculator', () => {
   });
 
   test('should correctly create an AgeCalculator object and assign user age', () => {
-    expect(ageCalculator.age).toEqual(35);
+    expect(ageCalculator.age).toEqual(32);
   });
 
 });
