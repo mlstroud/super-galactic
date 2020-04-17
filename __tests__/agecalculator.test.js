@@ -33,7 +33,12 @@ describe('Age Calculator', () => {
   });
 
   test('should correctly return user life expectancy on given planet', () => {
-    ageCalculator.calculateLifeExpectancy("Male", "Non-smoker");
-    expect(ageCalculator.calculateLifeExpectancy["Venus"]).toEqual(122);
+    ageCalculator.calculateLifeExpectancy("Male", false);
+    expect(ageCalculator.lifeExpectancy["Venus"]).toEqual(122);
+    expect(ageCalculator.lifeExpectancy["Mars"]).toEqual(40);
+
+    ageCalculator.calculateLifeExpectancy("Female", true);
+    expect(ageCalculator.lifeExpectancy["Mercury"]).toEqual(295);
+    expect(ageCalculator.lifeExpectancy["Jupiter"]).toEqual(5);
   });
 });
