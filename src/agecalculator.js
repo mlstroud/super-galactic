@@ -17,4 +17,8 @@ export class AgeCalculator {
   calculateMercuryAge() {
     this.ageOnMercury = Math.floor(this.age / this.yearOnMercury);
   }
+
+  calculateVenusAge() {
+    this.ageOnVenus = Math.floor(this.age / this.yearOnVenus);
+  }
 }
