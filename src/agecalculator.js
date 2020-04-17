@@ -1,33 +1,31 @@
 export class AgeCalculator {
   constructor(userAge) {
-    this.age                = userAge;
-    this.ageOnMercury       = 0;
-    this.ageOnVenus         = 0;
-    this.ageOnMars          = 0;
-    this.ageOnJupiter       = 0;
-    this.lifeExpectancy     = {};
-    this.yearsLeftToLive    = {};
-    this.yearsSurpassed     = {};
-    this.yearOnMercury      = .24;
-    this.yearOnVenus        = .62;
-    this.yearOnMars         = 1.88;
-    this.yearOnJupiter      = 11.86;
+    this.age                          = {};
+    this.age["Earth"]                 = userAge;
+    this.lifeExpectancy               = {};
+    this.yearsLeftToLive              = {};
+    this.yearsSurpassed               = {};
+    this.yearDuration                 = {};
+    this.yearDuration ["Mercury"]     = .24;
+    this.yearDuration ["Venus"]       = .62;
+    this.yearDuration ["Mars"]        = 1.88;
+    this.yearDuration ["Jupiter"]     = 11.86;
   }
 
   calculateMercuryAge() {
-    this.ageOnMercury = Math.floor(this.age / this.yearOnMercury);
+    this.age["Mercury"] = Math.floor(this.age["Earth"] / this.yearDuration["Mercury"]);
   }
 
   calculateVenusAge() {
-    this.ageOnVenus = Math.floor(this.age / this.yearOnVenus);
+    this.age["Venus"] = Math.floor(this.age["Earth"] / this.yearDuration["Venus"]);
   }
 
   calculateMarsAge() {
-    this.ageOnMars = Math.floor(this.age / this.yearOnMars);
+    this.age["Mars"] = Math.floor(this.age["Earth"] / this.yearDuration["Mars"]);
   }
 
   calculateJupiterAge() {
-    this.ageOnJupiter = Math.floor(this.age / this.yearOnJupiter);
+    this.age["Jupiter"] = Math.floor(this.age["Earth"] / this.yearDuration["Jupiter"]);
   }
 
   calculateLifeExpectancy(sex, isSmoker) {
@@ -42,9 +40,20 @@ export class AgeCalculator {
       planetLifeExpectancy -= 10;
     }
 
-    this.lifeExpectancy["Mercury"]  = Math.floor(planetLifeExpectancy / this.yearOnMercury);
-    this.lifeExpectancy["Venus"]    = Math.floor(planetLifeExpectancy / this.yearOnVenus);
-    this.lifeExpectancy["Mars"]     = Math.floor(planetLifeExpectancy / this.yearOnMars);
-    this.lifeExpectancy["Jupiter"]  = Math.floor(planetLifeExpectancy / this.yearOnJupiter);
+    this.lifeExpectancy["Mercury"]  = Math.floor(planetLifeExpectancy / this.yearDuration["Mercury"]);
+    this.lifeExpectancy["Venus"]    = Math.floor(planetLifeExpectancy / this.yearDuration["Venus"]);
+    this.lifeExpectancy["Earth"]    = planetLifeExpectancy;
+    this.lifeExpectancy["Mars"]     = Math.floor(planetLifeExpectancy / this.yearDuration["Mars"]);
+    this.lifeExpectancy["Jupiter"]  = Math.floor(planetLifeExpectancy / this.yearDuration["Jupiter"]);
+  }
+
+  calculateYearsToLive() {
+    // years to live = life expectancy - age on that planet.
+    let yearsToLive = 0;
+
+    for(let key in this.lifeExpectancy) {
+      this.yearsLeftToLive[key] =  this.lifeExpectancy[key] - this.age[key];
+      console.log(key);
+    }
   }
 }
