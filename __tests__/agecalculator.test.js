@@ -52,6 +52,8 @@ describe('Age Calculator', () => {
 
   test('should correctly return how many years user has surpassed their life expectancy on a given planet', () => {
     ageCalculator = new AgeCalculator(100);
+    ageCalculator.calculateMarsAge();
+    ageCalculator.calculateLifeExpectancy("Male", false);
     ageCalculator.calculateYearsSurpassed();
     expect(ageCalculator.yearsSurpassed["Mars"]).toEqual(13);
   })
