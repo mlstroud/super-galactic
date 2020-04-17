@@ -31,4 +31,9 @@ describe('Age Calculator', () => {
     ageCalculator.calculateJupiterAge();
     expect(ageCalculator.ageOnJupiter).toEqual(2);
   });
+
+  test('should correctly return user life expectancy on given planet', () => {
+    ageCalculator.calculateLifeExpectancy("Male", "Non-smoker");
+    expect(ageCalculator.calculateLifeExpectancy["Venus"]).toEqual(122);
+  });
 });
