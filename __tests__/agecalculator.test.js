@@ -49,4 +49,10 @@ describe('Age Calculator', () => {
     ageCalculator.calculateYearsToLive();
     expect(ageCalculator.yearsLeftToLive["Venus"]).toEqual(71);
   });
+
+  test('should correctly return how many years user has surpassed their life expectancy on a given planet', () => {
+    ageCalculator = new AgeCalculator(100);
+    ageCalculator.calculateYearsSurpassed();
+    expect(ageCalculator.yearsSurpassed["Mars"]).toEqual(13);
+  })
 });
