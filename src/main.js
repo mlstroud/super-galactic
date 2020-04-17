@@ -5,9 +5,7 @@ import $ from "jquery";
 import { getResultHTML } from './userinterfacelogic.js';
 
 $(document).ready(function() {
-
-  let submitted = false;
-
+  
   $("#form-age").submit(function(event) {
     event.preventDefault();
 
