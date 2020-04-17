@@ -54,8 +54,20 @@ export class AgeCalculator {
   }
 
   calculateYearsToLive() {
-    for(var key in this.lifeExpectancy) {
-      this.yearsLeftToLive[key] = (this.lifeExpectancy[key] - this.age[key]);
+    for(let key in this.lifeExpectancy) {
+      this.yearsLeftToLive[key] = this.lifeExpectancy[key] - this.age[key];
+    }
+  }
+
+  calculateYearsSurpassed() {
+    for(let key in this.lifeExpectancy) {
+      let years = this.age[key] - this.lifeExpectancy[key];
+
+      if(years < 0) {
+        this.yearsSurpassed[key] = 0;
+      } else {
+        this.yearsSurpassed[key] = years;
+      }
     }
   }
 }
