@@ -13,6 +13,7 @@ _Users input their age and will be provided with statistics regarding their age 
 * JavaScript & jQuery
 * Webpack
 * Node Package Manager
+* Jest
 * Bootstrap
 * HTML & CSS
 
@@ -30,7 +31,8 @@ _Users input their age and will be provided with statistics regarding their age 
 | Determine how many years user has lived past life expectancy. | 75, Male, Smoker (Earth)     | 9      |
 
 ## Stretch Goals
-* N/A
+* Add UI to application.
+* Determine user's next birthdate on each planet.
 
 ## Known Bugs
 * N/ A
