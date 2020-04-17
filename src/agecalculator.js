@@ -29,4 +29,22 @@ export class AgeCalculator {
   calculateJupiterAge() {
     this.ageOnJupiter = Math.floor(this.age / this.yearOnJupiter);
   }
+
+  calculateLifeExpectancy(sex, isSmoker) {
+    const baseLifeExpectancy = 81;
+    let planetLifeExpectancy = baseLifeExpectancy;
+
+    if(sex === "Male") {
+      planetLifeExpectancy -= 5;
+    }
+
+    if(isSmoker) {
+      planetLifeExpectancy -= 10;
+    }
+
+    this.lifeExpectancy["Mercury"] = Math.floor(planetLifeExpectancy / this.yearOnMercury);
+    this.lifeExpectancy["Venus"] = Math.floor(planetLifeExpectancy / this.yearOnVenus);
+    this.lifeExpectancy["Mars"] = Math.floor(planetLifeExpectancy / this.yearOnMars);
+    this.lifeExpectancy["Jupiter"] = Math.floor(planetLifeExpectancy / this.yearOnJupiter);
+  }
 }
