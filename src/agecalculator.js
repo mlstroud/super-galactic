@@ -19,23 +19,6 @@ export class AgeCalculator {
     this.age["Jupiter"] = Math.floor(this.age["Earth"] / this.yearDuration["Jupiter"]);
   }
 
-  // calculateMercuryAge() {
-  //   this.age["Mercury"] = Math.floor(this.age["Earth"] / this.yearDuration["Mercury"]);
-
-  // }
-
-  // calculateVenusAge() {
-  //   this.age["Venus"] = Math.floor(this.age["Earth"] / this.yearDuration["Venus"]);
-  // }
-
-  // calculateMarsAge() {
-  //   this.age["Mars"] = Math.floor(this.age["Earth"] / this.yearDuration["Mars"]);
-  // }
-
-  // calculateJupiterAge() {
-  //   this.age["Jupiter"] = Math.floor(this.age["Earth"] / this.yearDuration["Jupiter"]);
-  // }
-
   calculateLifeExpectancy(sex, isSmoker) {
     const baseLifeExpectancy = 81;
     let planetLifeExpectancy = baseLifeExpectancy;
