@@ -5,16 +5,16 @@ export class AgeCalculator {
     this.lifeExpectancy               = {};
     this.yearsLeftToLive              = {};
     this.yearsLeftToLive["Mercury"]   = 0;
-    this.yearsLeftToLive["Venus"]      = 0;
-    this.yearsLeftToLive["Earth"]   = 0;
-    this.yearsLeftToLive["Mars"]   = 0;
+    this.yearsLeftToLive["Venus"]     = 0;
+    this.yearsLeftToLive["Earth"]     = 0;
+    this.yearsLeftToLive["Mars"]      = 0;
     this.yearsLeftToLive["Jupiter"]   = 0;
     this.yearsSurpassed               = {};
     this.yearDuration                 = {};
-    this.yearDuration["Mercury"]     = .24;
-    this.yearDuration["Venus"]       = .62;
-    this.yearDuration["Mars"]        = 1.88;
-    this.yearDuration["Jupiter"]     = 11.86;
+    this.yearDuration["Mercury"]      = .24;
+    this.yearDuration["Venus"]        = .62;
+    this.yearDuration["Mars"]         = 1.88;
+    this.yearDuration["Jupiter"]      = 11.86;
   }
 
   calculateMercuryAge() {
