@@ -22,4 +22,9 @@ describe('Age Calculator', () => {
     expect(ageCalculator.ageOnVenus).toEqual(51);
   });
 
+  test('should correctly return user age in Mars years', () => {
+    ageCalculator.calculateMarsAge();
+    expect(ageCalculator.ageOnMars).toEqual(17);
+  });
+
 });
