@@ -41,4 +41,10 @@ describe('Age Calculator', () => {
     expect(ageCalculator.lifeExpectancy["Mercury"]).toEqual(295);
     expect(ageCalculator.lifeExpectancy["Jupiter"]).toEqual(5);
   });
+
+  test('should correctly return user years to live on a given planet', () => {
+    ageCalculator.calculateLifeExpectancy("Male, false");
+    ageCalculator.calculateYearsToLive();
+    expect(ageCalculator.yearsToLive["Venus"]).toEqual(71);
+  });
 });
