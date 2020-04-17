@@ -56,5 +56,5 @@ describe('Age Calculator', () => {
     ageCalculator.calculateLifeExpectancy("Male", false);
     ageCalculator.calculateYearsSurpassed();
     expect(ageCalculator.yearsSurpassed["Mars"]).toEqual(13);
-  })
+  });
 });
