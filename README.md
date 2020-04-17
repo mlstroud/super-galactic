@@ -19,7 +19,7 @@ _Users input their age and will be provided with statistics regarding their age 
 
 ## Specs
 
-| Application Behavior                                          | Input                        | Output |
+| Application Specs                                          | Input                        | Output |
 |:--------------------------------------------------------------|:-----------------------------|-------:|
 | Accept user input as age on Earth.                            | 32                           | 32     |
 | Determine user's age in Mercury years.                        | 32                           | 133    |
